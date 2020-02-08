@@ -1,3 +1,8 @@
+let url = window.location.href;
+
+// if (url.indexOf("index.html") != -1) {
+// } else if (url.indexOf("news.html") != -1) {
+// }
 AOS.init({
   duration: 800,
   easing: "slide",
@@ -6,7 +11,6 @@ AOS.init({
 
 window.onload = function() {
   //DINAMICKI UPIS INDEX.HTML
-  var perazikamikalaza = document.getElementById("perazikamikalaza");
   var klase = ["filterBlokKupatila", "filterBlokKuhinje", "filterBlokZidova"];
   var naslovi = ["Stakla za Kupatila", "Stakla za Kuhinje", "Stakleni zidovi"];
   var paragrafi = [
@@ -15,8 +19,9 @@ window.onload = function() {
     "Staklene pregrade i zidovi po meri i po vasem ukusu."
   ];
   // var linkovi = ["", "", ""]
+  let html = "";
   for (let i = 0; i < klase.length; i++) {
-    perazikamikalaza.innerHTML +=
+    html +=
       "<div class='col-lg-4 " +
       klase[i] +
       "'><div href='#' class='site-block-feature d-flex p-4 rounded mb-4'><div class='mr-3'><span class='icon flaticon-window font-weight-light h2'></span></div><div class='text'><h3>" +
@@ -25,10 +30,38 @@ window.onload = function() {
       paragrafi[i] +
       "</p></div></div></div>";
   }
+  if (document.getElementById("perazikamikalaza")) {
+    document.getElementById("perazikamikalaza").innerHTML = html;
+  }
+
+  function tajmer() {
+    var brojacVremena = new Date("Feb 19, 2020 15:37:25").getTime();
+
+    var sadasnje = new Date().getTime();
+
+    var distanca = brojacVremena - sadasnje;
+
+    var dani = Math.floor(distanca / (1000 * 60 * 60 * 24));
+    var sati = Math.floor(
+      (distanca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minuti = Math.floor((distanca % (1000 * 60 * 60)) / (1000 * 60));
+    var sekunde = Math.floor((distanca % (1000 * 60)) / 1000);
+
+    if (document.getElementById("tajmerDiv")) {
+      document.getElementById("tajmerDiv").innerHTML =
+        dani + "d " + sati + "h " + minuti + "m " + sekunde + "s ";
+    }
+
+    if (distanca < 0) {
+      clearInterval(x);
+      document.getElementById("tajmerDiv").innerHTML = "Isteklo";
+    }
+  }
+  setInterval(tajmer, 1000);
 };
 
 $("document").ready(function() {
-  ("use strict");
   function hederLista() {
     var niz = [
       "index.html",
@@ -377,7 +410,7 @@ $("document").ready(function() {
     }
   }
   //DINAMICKE SLIKE NEWS.HTML
-  var slikedinamicno = document.getElementById("slikedinamicno");
+
   var slike = [
     "staklo_za_kupatilo_tus_kabina_1.JPG",
     "staklo_za_kupatilo_tus_kabina_2.JPG",
@@ -482,8 +515,9 @@ $("document").ready(function() {
     "slika31",
     "slika32"
   ];
+  let html2 = "";
   for (let i = 0; i < slike.length; i++) {
-    slikedinamicno.innerHTML +=
+    html2 +=
       "<a href='images/" +
       slike[i] +
       "' class='" +
@@ -495,28 +529,8 @@ $("document").ready(function() {
       "'></a>";
   }
 
-  function tajmer() {
-    var brojacVremena = new Date("Feb 19, 2020 15:37:25").getTime();
-
-    var sadasnje = new Date().getTime();
-
-    var distanca = brojacVremena - sadasnje;
-
-    var dani = Math.floor(distanca / (1000 * 60 * 60 * 24));
-    var sati = Math.floor(
-      (distanca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    var minuti = Math.floor((distanca % (1000 * 60 * 60)) / (1000 * 60));
-    var sekunde = Math.floor((distanca % (1000 * 60)) / 1000);
-
-    document.getElementById("tajmerDiv").innerHTML =
-      dani + "d " + sati + "h " + minuti + "m " + sekunde + "s ";
-
-    if (distanca < 0) {
-      clearInterval(x);
-      document.getElementById("tajmerDiv").innerHTML = "Isteklo";
-    }
-    setInterval(tajmer, 1000);
+  if (document.getElementById("slikedinamicno")) {
+    document.getElementById("slikedinamicno").innerHTML = html2;
   }
 });
 
