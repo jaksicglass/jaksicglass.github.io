@@ -62,6 +62,18 @@ window.onload = function() {
 };
 
 $("document").ready(function() {
+  slideShow();
+
+  function slideShow() {
+    var trenutni = $("#novislajder .aktivna");
+    var sledeci = trenutni.next().length
+      ? trenutni.next()
+      : trenutni.parent().children(":first");
+    trenutni.removeClass("aktivna").fadeOut();
+    sledeci.addClass("aktivna").fadeIn();
+    setTimeout(slideShow, 4000);
+  }
+
   var nizbtn = ["Stakla za kupatila", "Stakla za kuhinje", "Stakla za zidove"];
   var btnIspis = "";
   for (let i in nizbtn) {

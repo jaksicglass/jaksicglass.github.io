@@ -11340,21 +11340,30 @@ h6 {
   align-items: center;
 }
 #okvirDiva {
-  width: 500px;
+  width: 650px;
   height: 340px;
-  float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #slikaAutora {
   background-image: url("../images/nemanja.jpg");
-  width: 220px;
+  width: 50%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  float: left;
 }
 #tekstOautoru {
+  width: 70%;
+}
+#novislajder {
+  width: 100%;
+  height: 800px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
+  justify-content: space-around;
+}
+#novislajder img {
+  display: none;
+  width: 70%;
+  height: 500px;
 }
