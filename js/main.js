@@ -62,15 +62,38 @@ window.onload = function() {
 };
 
 $("document").ready(function() {
+  var nizbtn = ["Stakla za kupatila", "Stakla za kuhinje", "Stakla za zidove"];
+  var btnIspis = "";
+  for (let i in nizbtn) {
+    btnIspis += `<button class="brad3 btn btn-light filter-button filterklik" data-id="${i}" data-filter="hdpe">${nizbtn[i]}</button>`;
+  }
+
+  $("#triBatna").html(btnIspis);
+
+  var nizbtn = ["Stakla za kupatila", "Stakla za kuhinje", "Stakla za zidove"];
+  var btnIspis = "";
+  for (let i in nizbtn) {
+    btnIspis += `<button class="brad3 btn btn-light filter-button filterklik" data-id="${i}" data-filter="hdpe">${nizbtn[i]}</button>`;
+  }
+
+  $("#triBatna1").html(btnIspis);
   function hederLista() {
     var niz = [
       "index.html",
       "about.html",
       "projects.html",
       "news.html",
-      "contact.html"
+      "contact.html",
+      "autor.html"
     ];
-    var niz1 = ["Home", "O nama", "Proizvodi", "Galerija", "Kontakt"];
+    var niz1 = [
+      "Home",
+      "O nama",
+      "Proizvodi",
+      "Galerija",
+      "Kontakt",
+      "O autoru"
+    ];
 
     var divLista = document.getElementById("hederLista");
     var ispis = "";
@@ -281,17 +304,17 @@ $("document").ready(function() {
   $(".filterklik").click(function() {
     let id = $(this).data("id");
 
-    if (id == 1) {
+    if (id == 0) {
       $(".kuhinja").fadeOut();
       $(".zidovi").fadeOut();
       $(".kupatilo").fadeIn();
     }
-    if (id == 2) {
+    if (id == 1) {
       $(".kupatilo").fadeOut();
       $(".zidovi").fadeOut();
       $(".kuhinja").fadeIn();
     }
-    if (id == 3) {
+    if (id == 2) {
       $(".kupatilo").fadeOut();
       $(".kuhinja").fadeOut();
       $(".zidovi").fadeIn();
