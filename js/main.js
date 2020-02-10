@@ -69,7 +69,7 @@ $("document").ready(function() {
     var sledeci = trenutni.next().length
       ? trenutni.next()
       : trenutni.parent().children(":first");
-    trenutni.removeClass("aktivna").fadeOut();
+    trenutni.removeClass("aktivna").hide();
     sledeci.addClass("aktivna").fadeIn();
     setTimeout(slideShow, 4000);
   }
