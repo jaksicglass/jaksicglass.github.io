@@ -35,7 +35,7 @@ window.onload = function() {
   }
 
   function tajmer() {
-    var brojacVremena = new Date("Feb 19, 2020 15:37:25").getTime();
+    var brojacVremena = new Date("Feb 25, 2020 15:37:25").getTime();
 
     var sadasnje = new Date().getTime();
 
@@ -471,8 +471,8 @@ $("document").ready(function() {
     "staklo_za_kupatilo_staklena_vrata_6.JPG",
     "staklo_za_kuhinju_1.JPG",
     "staklo_za_kuhinju_2.JPG",
-    "staklo_za_kuhinju_2.JPG",
-    "staklo_za_kuhinju_2.JPG",
+    "staklo_za_kuhinju_5.JPG",
+    "staklo_za_kuhinju_4.JPG",
     "stakleni_zidovi_1.JPG",
     "stakleni_zidovi_2.JPG",
     "stakleni_zidovi_3.JPG",
