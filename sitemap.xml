@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>file:///C:/Users/velis/Desktop/jaksicglass/index.html</loc>
+		<loc>https://jaksicglass.github.io/index.html</loc>
 		<lastmod>2020-12-2</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.95</priority>
 	</url>
 	<url>
-		<loc>file:///C:/Users/velis/Desktop/jaksicglass/about.html</loc>
+		<loc>https://jaksicglass.github.io/about.html</loc>
 		<lastmod>2020-12-2</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.75</priority>
 	</url>
 	<url>
-		<loc>file:///C:/Users/velis/Desktop/jaksicglass/projects.html</loc>
+		<loc>https://jaksicglass.github.io/projects.html</loc>
 		<lastmod>2020-12-2</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.65</priority>
 	</url>
 	<url>
-		<loc>file:///C:/Users/velis/Desktop/jaksicglass/news.html</loc>
+		<loc>https://jaksicglass.github.io/news.html</loc>
 		<lastmod>2020-12-2</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.65</priority>
 	</url>
 	<url>
-		<loc>file:///C:/Users/velis/Desktop/jaksicglass/contact.html</loc>
+		<loc>https://jaksicglass.github.io/contact.html</loc>
 		<lastmod>2020-12-2</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.65</priority>
