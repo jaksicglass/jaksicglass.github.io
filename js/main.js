@@ -35,7 +35,7 @@ window.onload = function() {
   }
 
   function tajmer() {
-    var brojacVremena = new Date("Feb 29, 2020 15:37:25").getTime();
+    var brojacVremena = new Date("Mar 3, 2020 15:37:25").getTime();
 
     var sadasnje = new Date().getTime();
 
